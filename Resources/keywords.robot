@@ -23,7 +23,6 @@ ${Impressao_Digital_Realizada}    id=impressao-digital-text
 ${Foto_De_Perfil}    C:/Users/Emily/OneDrive/Pictures/Screenshots/Captura de tela 2025-03-02 115734.png
 ${Idioma_Valor}    fr
 ${Nivel_Privacidade_Valor}    alto
-#${Campo_Vazio} (Achei que pra uma string vazia eu precisava criar uma keyword sem escrever nada kkkkk)
 
 *** Keywords *** 
 #Test Case 01
@@ -41,7 +40,7 @@ E preencho o campo "Data Nascimento" com @Data_Nascimento
     Input Text    ${Campo_Data_Nascimento}    text=${Data_Nascimento} 
 E forneço uma @Impressao_Digital válida no campo “Impressão Digital”
     Click Element    ${Campo_Impressao_Digital}
-    Wait Until Element Is Visible    locator=${Impressao_Digital_Realizada}   
+    Wait Until Element Is Visible    ${Impressao_Digital_Realizada}   
 E realizo o upload de uma imagem com a opção @Escolher_Arquivo no campo "Escolher Arquivo"
     Choose File    ${Escolher_Arquivo}    ${Foto_De_Perfil}
 E seleciono a opção @Francês no dropdown de sugestões do campo "Preferência de Idioma"
@@ -54,8 +53,6 @@ E seleciono a checkbox no campo "Aceito a coleta de dados para análise personal
     Capture Page Screenshot
 E clico em “Finalizar Cadastro”
     Click Element    ${Botao_Finalizar_Cadastro} 
-    # Set Window Size    1920    1100 (Não consegui printar aqui porque ele evidencia a tela vazio pois recarrega após finalizar)
-    # Capture Page Screenshot
 Então o cadastro é concluído e a página recarrega
     Set Window Size    1920    1100
     Capture Page Screenshot    
@@ -63,7 +60,7 @@ Então o cadastro é concluído e a página recarrega
 #Test Case 02     
 
 E seleciono a checkbox no campo “Aceito a coleta de dados para análise personalizada” por fim
-    Select Checkbox    ${Checkbox_Consentimento_Coleta_De_Dados}     #Precisei incluir uma validação aqui pro Test Case dois só para não gerar dois prints
+    Select Checkbox    ${Checkbox_Consentimento_Coleta_De_Dados}     #Precisei incluir uma validação aqui pro Test Case 02 só para não gerar dois prints
 E clico em "Cancelar"
     Click Element     ${Botão_cancelar}
     Wait Until Page Does Not Contain    text=Cadastrar Perfil de Usuário Inteligente
