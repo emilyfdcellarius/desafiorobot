@@ -32,8 +32,7 @@ Abrir navegador
 
 Dado que estou na tela Cadastrar Perfil 
     Go To    url=${URL}    
-    Wait Until Page Contains    text=Cadastrar Perfil de Usuário Inteligente
-    #Wait Until Element Is Visible    locator=${Menu} 
+    Wait Until Page Contains    text=Cadastrar Perfil de Usuário Inteligente 
 Quando preencho o campo "Nome Completo" com @Nome_Completo 
     Input Text    ${Campo_Nome}    text=${Nome}
 E preencho o campo "Data Nascimento" com @Data_Nascimento
