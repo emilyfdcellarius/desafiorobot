@@ -59,8 +59,6 @@ E seleciono a checkbox no campo “Aceito a coleta de dados para análise person
     Select Checkbox    ${Checkbox_Consentimento_Coleta_De_Dados}     #Precisei incluir uma validação aqui pro Test Case 02 só para não gerar dois prints
 E clico em "Cancelar"
     Click Element     ${Botão_cancelar}
-    Wait Until Page Does Not Contain    text=Cadastrar Perfil de Usuário Inteligente
-
 Então o cadastro é cancelado
     Capture Page Screenshot
 
@@ -104,7 +102,7 @@ E preencho o campo "Data Nascimento" com um valor indevido para o formato
 Então a tela apresenta o alerta "Insira um valor válido. O campo está incompleto ou tem uma data inválida." 
     Element Should Be Visible    css=input:invalid  
     Capture Page Screenshot  
-    
-      
+
+
 Então o navegador é fechado
     Close Browser 
