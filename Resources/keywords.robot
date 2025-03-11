@@ -29,7 +29,6 @@ ${Nivel_Privacidade_Valor}    alto
 Abrir navegador
     Open Browser    browser=chrome
     Maximize Browser Window    
-
 Dado que estou na tela Cadastrar Perfil 
     Go To    url=${URL}    
     Wait Until Page Contains    text=Cadastrar Perfil de Usuário Inteligente 
