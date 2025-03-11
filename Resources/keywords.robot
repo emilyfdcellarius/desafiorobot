@@ -103,8 +103,8 @@ E preencho o campo "Data Nascimento" com um valor indevido para o formato
     Input Text    ${Campo_Data_Nascimento}    text=${Data_Nascimento_Incorreta}
 Então a tela apresenta o alerta "Insira um valor válido. O campo está incompleto ou tem uma data inválida." 
     Element Should Be Visible    css=input:invalid  
-    Capture Page Screenshot    
-
-
+    Capture Page Screenshot  
+    
+      
 Então o navegador é fechado
     Close Browser 
