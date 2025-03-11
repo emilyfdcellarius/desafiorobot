@@ -4,7 +4,7 @@ Library    SeleniumLibrary
 
 *** Variables ***
 #Elementos da página
-${URL}    file:///C:/Users/Emily/Downloads/Cadastrar%20Perfil%20de%20Usu%C3%A1rio%20Inteligente%20%20(1).html
+${URL}     https://desafio-equipe.vercel.app/
 ${Campo_Nome}    id=nome 
 ${Campo_Data_Nascimento}    id=dataNascimento
 ${Campo_Impressao_Digital}    id=impressao-digital
@@ -20,7 +20,7 @@ ${Nome}    Emily Fernanda Domingues Cellarius
 ${Data_Nascimento}    02/02/2000 
 ${Data_Nascimento_Incorreta}    9
 ${Impressao_Digital_Realizada}    id=impressao-digital-text
-${Foto_De_Perfil}    C:/Users/Emily/OneDrive/Pictures/Screenshots/Captura de tela 2025-03-02 115734.png
+${Foto_De_Perfil}    C:\\Users\\emilycellarius\\desafiorobot\\imagens\\foto.jpg
 ${Idioma_Valor}    fr
 ${Nivel_Privacidade_Valor}    alto
 
@@ -48,12 +48,10 @@ E seleciono a opção @Alto no dropdown de sugestões do campo "Nível de Privac
     Select From List By Value   ${Campo_Nivel_Privacidade}    ${Nivel_Privacidade_Valor}
 E seleciono a checkbox no campo "Aceito a coleta de dados para análise personalizada"
     Select Checkbox    ${Checkbox_Consentimento_Coleta_De_Dados}
-    Set Window Size    1920    1100
     Capture Page Screenshot
 E clico em “Finalizar Cadastro”
     Click Element    ${Botao_Finalizar_Cadastro} 
-Então o cadastro é concluído e a página recarrega
-    Set Window Size    1920    1100
+Então o cadastro é concluído 
     Capture Page Screenshot    
 
 #Test Case 02     
@@ -64,7 +62,7 @@ E clico em "Cancelar"
     Click Element     ${Botão_cancelar}
     Wait Until Page Does Not Contain    text=Cadastrar Perfil de Usuário Inteligente
 
-Então o cadastro é cancelado e a página fechada
+Então o cadastro é cancelado
     Capture Page Screenshot
 
 #Test Case 03 

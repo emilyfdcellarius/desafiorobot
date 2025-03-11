@@ -18,6 +18,6 @@ Caso de teste 01 - Cadastro Perfil de Usuário Inteligente
     E seleciono a opção @Alto no dropdown de sugestões do campo "Nível de Privacidade"
     E seleciono a checkbox no campo "Aceito a coleta de dados para análise personalizada"
     E clico em “Finalizar Cadastro”
-    Então o cadastro é concluído e a página recarrega
+    Então o cadastro é concluído 
      
 

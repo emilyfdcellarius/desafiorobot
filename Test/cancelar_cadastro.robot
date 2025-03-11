@@ -18,5 +18,4 @@ Caso de teste 02 - Cancelar um cadastro de perfil
     E seleciono a opção @Alto no dropdown de sugestões do campo "Nível de Privacidade"
     E seleciono a checkbox no campo “Aceito a coleta de dados para análise personalizada” por fim
     E clico em "Cancelar"
-    Então o cadastro é cancelado e a página fechada
-
+    Então o cadastro é cancelado

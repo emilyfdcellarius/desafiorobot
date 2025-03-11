@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Essa suíte testa o site Cadastrar Perfil de Usuário Inteligente
+Documentation    Essa suíte testa o site Cadastrar Perfil de Usuário Inteligente utilizando a função [Arguments]
 Library    SeleniumLibrary        
 Test Setup    Abrir navegador
 Test Teardown    Então o cadastro é concluído 
@@ -8,21 +8,21 @@ Test Teardown    Então o cadastro é concluído
 #Test case 01
 ${Nome}    Killua 
 ${Data_Nascimento}    07/08/1987
-${Foto_Perfil}    C:/Users/Emily/OneDrive/Pictures/Screenshots/Captura de tela 2025-03-02 115752.png
+${Foto_Perfil}    C:\\Users\\emilycellarius\\desafiorobot\\imagens\\foto.jpg
 ${Idioma}    fr
 ${Nivel_Privacidade}    alto
 
 #Test case 02
 ${Nome_Dois}   Gon
 ${Data_Nascimento_Dois}    05/06/1987
-${Foto_Perfil_Dois}    C:/Users/Emily/OneDrive/Pictures/Screenshots/Captura de tela 2025-03-02 115752.png  
+${Foto_Perfil_Dois}    C:\\Users\\emilycellarius\\desafiorobot\\imagens\\foto.jpg
 ${Idioma_Dois}    pt
 ${Nivel_Privacidade_Dois}    medio
 
 #Test case 03
 ${Nome_Tres}    Leorio
 ${Data_Nascimento_Tres}    04/05/1982   
-${Foto_Perfil_Tres}   C:/Users/Emily/OneDrive/Pictures/Screenshots/Captura de tela 2025-03-02 115752.png  
+${Foto_Perfil_Tres}   C:\\Users\\emilycellarius\\desafiorobot\\imagens\\foto.jpg
 ${Idioma_Tres}    es
 ${Nivel_Privacidade_Tres}    padrao
 
@@ -31,7 +31,7 @@ Abrir navegador
     Open Browser    browser=chrome
     Maximize Browser Window  
 Dado que estou na tela Cadastrar Perfil
-    Go To    url=file:///C:/Users/Emily/Downloads/Cadastrar%20Perfil%20de%20Usu%C3%A1rio%20Inteligente%20%20(1).html    
+    Go To    url= https://desafio-equipe.vercel.app/  
     Wait Until Page Contains    text=Cadastrar Perfil de Usuário Inteligente 
 Quando preencho o campo "Nome Completo" com @Nome_Completo 
     [Arguments]    ${Nome}     
